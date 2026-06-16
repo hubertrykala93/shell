@@ -1,0 +1,23 @@
+.app {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header  header'
+    'sidebar content';
+  min-height: 100vh;
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__sidebar {
+    grid-area: sidebar;
+  }
+
+  &__content {
+    grid-area: content;
+    background-color: green;
+    overflow-y: auto;
+  }
+}

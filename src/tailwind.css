@@ -1,0 +1,13 @@
+/* Tailwind CSS v4
+   Kept in a plain .css file (not styles.scss) so the Tailwind PostCSS plugin
+   processes these imports — Dart Sass would otherwise try to resolve them
+   itself and fail.
+
+   The @layer order is declared up front so PrimeNG's component styles sit
+   *below* Tailwind's `utilities` layer, letting Tailwind classes override
+   PrimeNG. PrimeNG emits into the `primeng` layer via the cssLayer option in
+   app.config.ts. */
+@layer theme, base, primeng, components, utilities;
+
+@import "tailwindcss";
+@import "tailwindcss-primeui";
