@@ -1,7 +1,4 @@
-<aside
-  class="sidebar"
-  [class.sidebar--collapsed]="sidebarService.isSidebarOpen()"
->
+<aside class="sidebar" [class.sidebar--collapsed]="sidebarService.isSidebarOpen()">
   <p-button
     icon="pi pi-times"
     (click)="
@@ -17,7 +14,7 @@
     >
       <li>
         @if (!sidebarService.isSidebarOpen()) {
-          <a routerLink="products">Products</a>
+          <h1 routerLink="products">Products</h1>
         } @else {
           <p-button icon="pi pi-check" />
         }
@@ -25,7 +22,7 @@
 
       <li>
         @if (!sidebarService.isSidebarOpen()) {
-          <a routerLink="users">Users</a>
+          <h2 routerLink="users">Users</h2>
         } @else {
           <p-button icon="pi pi-user" />
         }
