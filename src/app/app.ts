@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './shared/ui/header/header';
 import { Sidebar } from './shared/ui/sidebar/sidebar';
+import { SidebarService } from './shared/ui/sidebar/sidebar.service';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,6 @@ import { Sidebar } from './shared/ui/sidebar/sidebar';
   styleUrl: './app.scss',
 })
 export class App {
+  public readonly sidebarService = inject(SidebarService);
   protected readonly title = signal('shell');
 }

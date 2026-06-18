@@ -11,3 +11,9 @@
 
 @import "tailwindcss";
 @import "tailwindcss-primeui";
+
+/* Scan the compiled @company/ui library (lives outside this app, so Tailwind
+   v4 won't auto-detect it) — generates the utility classes used in its
+   component templates. Rebuild the library (`ng build ui`) and restart the
+   dev server after library template changes. */
+@source "../../company-ui/dist/ui";
